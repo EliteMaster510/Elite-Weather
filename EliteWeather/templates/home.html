@@ -2,7 +2,28 @@
 
 {% block content %}
 
-<h1>Hello World!!</h1>
+<html>
+<head>
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, world!!</h1>
+        <p class="lead">I,m Pratik Rane.</br>Welcome My First WebSite!!</br></br></p>
+        <hr class="my-4">
+        <p>I,m Working On A Web Application ,My Own....</p>
+        <p>Thank For Visiting!!</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Know More...</a>
+      </div>
+</br>
+</head>
+<body>
+<h5>Work Under Progress.....</h5></br>
+Weather Description : {{ api.0.WeatherText }}</br>
+Temparature : {{ api.0.Temperature.Metric.Value }}
+              {{ api.0.Temperature.Metric.Unit }}</br>
+Humidity : {{ api.0.RelativeHumidity }}</br>
+Wind Speed : {{ api.0.WindGust.Speed.Metric.Value }}
+             {{ api.0.WindGust.Speed.Metric.Unit }}</br>           
+</body>
+</html>
 
 {% endblock %}
 
