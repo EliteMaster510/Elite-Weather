@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Elite Weather</h1>
+      <h1 class="display-4">Pune</h1>
+      <p class="lead">Weather Description : Cloudy And sun <!--{{ api.0.WeatherText }}--></p>
+      <p class="lead">Temparature : 28.3C <!--{{ api.0.Temperature.Metric.Value }}-->
+        <!--{{ api.0.Temperature.Metric.Unit }}--></p>
+      <p class="lead">Humidity : 63 <!--{{ api.0.RelativeHumidity }}--></p>
+      <p class="lead">Wind Speed : 13.5km/h <!--{{ api.0.WindGust.Speed.Metric.Value }}-->
+        <!--{{ api.0.WindGust.Speed.Metric.Unit }}--></p>
+    </div>
+  </div>          
+
+{% endblock %}
