@@ -9,13 +9,26 @@ def home(request):
      #try:
          #api = json.loads(api_requests.content)
      #except Exception as e:
-         #api = "Error..."
+         #api = "Error..."  
 
-     return render(request, 'home.html', {})   # {'api':api}
+     return render(request, 'home.html', {})  
 
 
 def Elite_Weather(request):
-    return render(request, 'Elite_Weather.html', {})
+     return render(request, 'Elite_Weather.html', {})
+
+def Air_Quality(request):
+     import json
+     import requests
+
+     api_requests = requests.get('http://api.airpollutionapi.com/1.0/aqi?lat=18.5204&lon=73.8567&APPID=15s8pr56hh45unlomcn6ub84ei')
+
+     try:
+         api = json.loads(api_requests.content)
+     except Exception as e:
+         api = "Error..."
+
+     return render(request, 'Air_Quality.html', {'api':api})     
 
 
 def about(request):
